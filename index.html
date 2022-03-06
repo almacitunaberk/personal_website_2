@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 
     <!--==================== SWIPER CSS ====================-->
-    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
     <!--==================== CSS ====================-->
     <link rel="stylesheet" href="assets/css/styles.css" />
@@ -23,7 +23,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list grid">
             <li class="nav__item">
-              <a href="#home" class="nav__link nav__icon"> <i class="uil uil-estate"></i> Home </a>
+              <a href="#home" class="nav__link nav__icon active-link"> <i class="uil uil-estate"></i> Home </a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link nav__icon"> <i class="uil uil-user"></i> About </a>
@@ -44,6 +44,8 @@
           <i class="uil uil-times nav__close" id="nav-close"></i>
         </div>
         <div class="nav__btn">
+          <!-- Theme Change Button -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
           <div class="nav__toggle" id="nav-toggle">
             <i class="uil uil-apps"></i>
           </div>
@@ -275,68 +277,146 @@
       </section>
 
       <!--==================== QUALIFICATION ====================-->
-      <section class="qualification section">
-        <h2 className="section__title">Qualification</h2>
-        <span className="section__subtitle">My personal journey</span>
+      <section class="qualification section" id="qualification">
+        <h2 class="section__title">Qualification</h2>
+        <span class="section__subtitle">My personal journey</span>
 
-        <div className="qualification__container container">
-          <div className="qualification__tabs">
-            <div className="qualification__button button--flex">
+        <div class="qualification__container container">
+          <div class="qualification__tabs">
+            <div class="qualification__button button--flex qualification__active" data-target="#education">
               <i class="uil uil-graduation-cap qualification__icon"></i> Education
             </div>
 
-            <div className="qualification__button button--flex">
+            <div class="qualification__button button--flex" data-target="#work">
               <i class="uil uil-briefcase-alt qualification__icon"></i> Experience
             </div>
           </div>
 
-          <div className="qualification__sections">
-            <div className="qualification__content">
-              <div className="qualification__data">
+          <div class="qualification__sections">
+            <div class="qualification__content qualification__active" data-content id="education">
+              <div class="qualification__data">
                 <div>
-                  <h3 className="qualification__title">Computer Science</h3>
-                  <span className="qualification__subtitle">Koç University</span>
-                  <div className="qualification__calendar">
-                    <i class="uil uil-calendar-alt">2017 - 2023</i>
+                  <h3 class="qualification__title">Computer Science</h3>
+                  <span class="qualification__subtitle">Koç University</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">2017 - 2023</i>
                   </div>
                 </div>
 
                 <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
                 </div>
               </div>
 
-              <div className="qualification__data">
+              <div class="qualification__data">
                 <div></div>
 
                 <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
                 </div>
 
                 <div>
-                  <h3 className="qualification__title">Fullstack Developer</h3>
-                  <span className="qualification__subtitle">Digimetri</span>
-                  <div className="qualification__calendar">
-                    <i class="uil uil-calendar-alt">June 2021 - August 2021</i>
+                  <h3 class="qualification__title">Exchange</h3>
+                  <span class="qualification__subtitle">University of Toronto</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">January 2022 - April 2022</i>
                   </div>
                 </div>
               </div>
 
-              <div className="qualification__data">
-                <div></div>
-
+              <div class="qualification__data">
                 <div>
-                  <span className="qualification__rounder"></span>
-                  <span className="qualification__line"></span>
+                  <h3 class="qualification__title">Mathematics</h3>
+                  <span class="qualification__subtitle">Koç University</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">2017 - 2023</i>
+                  </div>
                 </div>
 
                 <div>
-                  <h3 className="qualification__title">Android Developer</h3>
-                  <span className="qualification__subtitle">Commencis</span>
-                  <div className="qualification__calendar">
-                    <i class="uil uil-calendar-alt">October 2020 - June 2021</i>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">High School of Science - Valedictorian</h3>
+                  <span class="qualification__subtitle">Adana - Turkey</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">2013 - 2017</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="qualification__content" data-content id="work">
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Research Intern</h3>
+                  <span class="qualification__subtitle">FORD Otosan</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">October 2021 - June 2022</i>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title">Fullstack Developer</h3>
+                  <span class="qualification__subtitle">Digimetri</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">June 2021 - August 2021</i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title">Android Developer</h3>
+                  <span class="qualification__subtitle">Commencis</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">October 2019 - June 2021</i>
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+
+              <div class="qualification__data">
+                <div></div>
+
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <!-- <span class="qualification__line"></span> -->
+                </div>
+                <div>
+                  <h3 class="qualification__title">Undergraduate Research Assistant</h3>
+                  <span class="qualification__subtitle">Koç University</span>
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt qualification__calendar-icon">June 2019 - October 2019</i>
                   </div>
                 </div>
               </div>
@@ -345,29 +425,150 @@
         </div>
       </section>
 
-      <!--==================== SERVICES ====================-->
-      <section class="services section" id="services"></section>
-
       <!--==================== PORTFOLIO ====================-->
-      <section class="portfolio section" id="portfolio"></section>
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Porjects</h2>
+        <span class="section__subtitle">Most recent work</span>
 
-      <!--==================== PROJECT IN MIND ====================-->
-      <section class="project section"></section>
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio1.jpg" alt="" class="portfolio__img" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Ecommerce Website</h3>
+                <p class="portfolio__description">
+                  Developed an ecommerce concept website from front to back using MongoDBb, ExpressJS, React and NodeJS
+                </p>
+                <a href="#" class="button button--flex button--small portfolio__button">
+                  Repo <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
 
-      <!--==================== TESTIMONIAL ====================-->
-      <section class="testimonial section"></section>
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio2.jpg" alt="" class="portfolio__img" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Neural Networks from Scratch</h3>
+                <p class="portfolio__description">
+                  Started a new punlic GitHub repo to implement Neural Networks from scratch using Python and Pytorch.
+                </p>
+                <a href="#" class="button button--flex button--small portfolio__button">
+                  Repo <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio__content grid swiper-slide">
+              <img src="assets/img/portfolio3.jpg" alt="" class="portfolio__img" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">CSS Animations</h3>
+                <p class="portfolio__description">Developed many visually aesthetic CSS animations.</p>
+                <a href="#" class="button button--flex button--small portfolio__button">
+                  Repos <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left swiper-portfolio-icon"></i>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
 
       <!--==================== CONTACT ME ====================-->
-      <section class="contact section" id="contact"></section>
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact Me</h2>
+        <span class="section__subtitle">Get in touch</span>
+
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-envelope-alt contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle"
+                  ><a href="mailto:almaictunaberk@gmail.com" class="contact__email">almacitunaberk@gmail.com</a></span
+                >
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle">Toronto, ON - Canada</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label htmlFor="" class="contact__label">Name</label>
+                <input type="text" class="contact__input" />
+              </div>
+
+              <div class="contact__content">
+                <label htmlFor="" class="contact__label">Email</label>
+                <input type="email" class="contact__input" />
+              </div>
+
+              <div class="contact__content">
+                <label htmlFor="" class="contact__label">Message</label>
+                <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+              </div>
+            </div>
+
+            <div>
+              <a href="#" class="button button--flex"> Send Message <i class="uil uil-message button__icon"></i> </a>
+            </div>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Berk</h1>
+            <span class="footer__subtitle">Software Developer</span>
+          </div>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#portfolio" class="footer__link">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer__link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a href="https://www.linkedin.com/in/tunaberk-almaci" target="_blank" class="footer__social"
+              ><i class="uil uil-linkedin-alt"></i
+            ></a>
+          </div>
+        </div>
+
+        <p class="footer__copy">&#169; Berk. All rights reserved</p>
+      </div>
+    </footer>
 
     <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
     <!--==================== SWIPER JS ====================-->
-    <script src=""></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
 
     <!--==================== MAIN JS ====================-->
     <script src="assets/js/main.js"></script>
